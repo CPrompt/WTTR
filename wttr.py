@@ -5,22 +5,19 @@ i3pystatus module: wttr
 Shows current weather conditions from wttr.in in the i3bar.
 
 Install:
-    Save this file as `wttr.py` somewhere on your PYTHONPATH, e.g.
-    ~/.config/i3pystatus/wttr.py, or drop it directly into the
+    Save this file as `wttr.py` and drop it directly into the
     i3pystatus package's modules directory.
 
 Usage in your i3pystatus config (~/.config/i3pystatus/config.py):
 
-    import sys
-    sys.path.append("/home/YOUR_USER/.config/i3pystatus")  # if not on PYTHONPATH
-    from wttr import Wttr
+    from i3pystatus.wttr import Wttr 
 
-    status.register(Wttr(
+    status.register("wttr",
         location="High Point, North Carolina",
         units="F",
         format="{icon} {temp}°{units} (H:{temp_max}° L:{temp_min}°)",
         interval=600,
-    ))
+    )
 
 Requires: requests
 """
