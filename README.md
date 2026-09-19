@@ -12,9 +12,9 @@ information in your config for i3pystatus.
 
 i.e.
 
-[code]
+```json
 status.register("wttr",
                 location="High Point, North Carolina",
                 units="F",
                 )
-[/code]
+```
