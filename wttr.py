@@ -146,7 +146,8 @@ class Wttr(IntervalModule):
 
     interval = 600  # seconds; wttr.in doesn't need to be polled every second
 
-    on_leftclick = "run"  # manual refresh on click
+    #on_leftclick = "run"  # manual refresh on click
+    on_rightclick = "open_in_browser"
 
     def init(self):
         self._session = requests.Session()
